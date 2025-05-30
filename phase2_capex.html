@@ -7,32 +7,108 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="sidebar">
-        <h1>PMI Case Study</h1>
-        <ul>
-            <li><a href="index.html">Title Page</a></li>
-            <li><a href="phase1.html">Phase 1: Intro to Case Study</a></li>
-            <li>
-                <a href="phase2_capex.html">Phase 2: CapEx</a>
-                <ul>
-                    <li class="sub-item"><a href="phase3a1_high.html">Phase 3a1: CapEx - High Tech</a></li>
-                    <li class="sub-item"><a href="phase3a2_low.html">Phase 3a2: CapEx - Low Tech</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="phase2_product.html">Phase 2: Product</a>
-                <ul>
-                    <li class="sub-item"><a href="phase3b1_a.html">Phase 3b1: Product A</a></li>
-                    <li class="sub-item"><a href="phase3b2_b.html">Phase 3b2: Product B</a></li>
-                    <li class="sub-item"><a href="phase3b3_c.html">Phase 3b3: Product C</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <div id="nav-placeholder"></div>
 
     <main class="main-content">
-        <h1>Phase 2: CapEx</h1>
-        <p class="placeholder-text">Content will go here later</p>
+        <h1> Phase 2: Capital Expenditure</h1>
+        
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>In this phase, you'll evaluate different capital expenditure options for addressing the paint department bottleneck. Your decision will impact production capacity, setup time, and financial metrics.</p>
+        </section>
+
+        <section class="project-documents">
+            <h2>Project Documents</h2>
+            <p>Below are the documents provided to help you analyze the CapEx options:</p>
+            <ul>
+                <li>Equipment specifications and cost sheets
+                    <ul>
+                        <li>High-tech paint booth with dryer specifications</li>
+                        <li>Low-tech paint booth specifications</li>
+                        <li>Detailed cost breakdowns</li>
+                    </ul>
+                </li>
+                <li>Utilization and downtime datasets</li>
+                <li>Stakeholder Memos:
+                    <ul>
+                        <li>Finance concerns about ROI</li>
+                        <li>Operations focus on implementation speed</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="download-section">
+                <a href="#" class="download-link">Download Project Documents (ZIP)</a>
+            </div>
+        </section>
+
+        <section class="option-comparison">
+            <div class="option-card">
+                <h3>High-Tech Paint Booth with Dryer</h3>
+                <ul>
+                    <li>Higher initial investment</li>
+                    <li>Significant production increase</li>
+                    <li>Longer setup and installation time</li>
+                    <li>More complex maintenance</li>
+                    <li>Better quality control</li>
+                </ul>
+            </div>
+            <div class="option-card">
+                <h3>Low-Tech Paint Booth</h3>
+                <ul>
+                    <li>Lower initial investment</li>
+                    <li>Moderate production increase</li>
+                    <li>Faster setup and installation</li>
+                    <li>Simpler maintenance</li>
+                    <li>Basic quality control</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="deliverables">
+            <h2>Participant Deliverables</h2>
+            <p>Complete the following deliverables:</p>
+            <ul>
+                <li>
+                    <strong>Capital expenditure proposal</strong>
+                    <ul>
+                        <li>Include data-backed justification</li>
+                        <li>ROI analysis</li>
+                        <li>Implementation timeline</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Risk register</strong>
+                    <ul>
+                        <li>Focus on CapEx-specific risks</li>
+                        <li>Include mitigation strategies</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Work breakdown structure (WBS)</strong>
+                    <ul>
+                        <li>Implementation phases</li>
+                        <li>Resource requirements</li>
+                        <li>Key milestones</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="download-section">
+                <a href="#" class="download-link">Download Deliverable Templates (ZIP)</a>
+            </div>
+        </section>
+
+        <section class="tips-section">
+            <h2>Tips/Guides</h2>
+            <ul>
+                <li>Calculate ROI, not just upfront cost</li>
+                <li>Consider setup time vs. long-term gains</li>
+                <li>Balance stakeholder priorities carefully</li>
+                <li>Factor in maintenance and training costs</li>
+                <li>Consider impact on other departments</li>
+            </ul>
+        </section>
     </main>
+
+    <script src="navigation.js"></script>
 </body>
 </html> 
