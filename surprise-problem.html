@@ -3,38 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3.1. Surprise Problem – Overview - PMI-LA Case Study Challenge</title>
+    <title>3.1. Unexpected Obstacle - PMI-LA Case Study Challenge</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="nav-placeholder"></div>
 
     <main class="main-content">
-        <h1>3.1. Surprise Problem – Overview</h1>
+        <h1>3.1. Unexpected Obstacle</h1>
         
         <section class="surprise-overview">
-            <h2>Surprise Problem Introduction</h2>
-            <p class="placeholder-text">[Content to be filled in - Surprise problem scenario and context]</p>
+            <h2>Unexpected Obstacle Introduction</h2>
+            <p class="placeholder-text">[Content to be filled in - Introduction to unexpected obstacles in project management]</p>
         </section>
 
-        <section class="problem-elements">
-            <h2>Problem Elements</h2>
-            <ul>
-                <li>Problem Identification</li>
-                <li>Impact Assessment</li>
-                <li>Stakeholder Communication</li>
-                <li>Response Strategy Development</li>
-                <li>Change Management Planning</li>
-            </ul>
+        <section class="scenario-selection">
+            <h2>Select Your Scenario</h2>
+            <p>Click one of the mystery buttons below to reveal your unexpected obstacle scenario:</p>
+            
+            <div class="scenario-buttons">
+                <button class="mystery-button" onclick="revealScenario(1)">Mystery Button 1</button>
+                <button class="mystery-button" onclick="revealScenario(2)">Mystery Button 2</button>
+                <button class="mystery-button" onclick="revealScenario(3)">Mystery Button 3</button>
+            </div>
+        </section>
+
+        <section id="scenario-1" class="scenario-content" style="display: none;">
+            <h3>Scenario 1: Fire Marshal Adds Equipment Requirement</h3>
+            <p class="placeholder-text">[Content to be filled in - Fire Marshal equipment requirement scenario]</p>
+        </section>
+
+        <section id="scenario-2" class="scenario-content" style="display: none;">
+            <h3>Scenario 2: Paint Booth Logistics Delay and Alternative Option</h3>
+            <p class="placeholder-text">[Content to be filled in - Paint booth logistics delay scenario]</p>
+        </section>
+
+        <section id="scenario-3" class="scenario-content" style="display: none;">
+            <h3>Scenario 3: AQMD Permit Hold – Detailed Building Plans Required</h3>
+            <p class="placeholder-text">[Content to be filled in - AQMD permit hold scenario]</p>
         </section>
 
         <div class="navigation-buttons">
-            <a href="change-request.html" class="button">Next: Change Request</a>
+            <a href="change-request.html" class="button">Next: Responding to Change</a>
         </div>
     </main>
 
     <div class="right-sidebar"></div>
 
     <script src="navigation.js"></script>
+    <script>
+        function revealScenario(scenarioNumber) {
+            // Hide all scenarios first
+            document.querySelectorAll('.scenario-content').forEach(scenario => {
+                scenario.style.display = 'none';
+            });
+            
+            // Show the selected scenario
+            document.getElementById('scenario-' + scenarioNumber).style.display = 'block';
+            
+            // Update button styles to show which one was selected
+            document.querySelectorAll('.mystery-button').forEach(button => {
+                button.classList.remove('selected');
+            });
+            event.target.classList.add('selected');
+        }
+    </script>
 </body>
 </html> 
