@@ -488,6 +488,36 @@ navStyles.textContent = `
 
 document.head.appendChild(navStyles);
 
+// Load both navigation and countdown widgets
+document.addEventListener('DOMContentLoaded', function() {
+    // Load navigation
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+            highlightCurrentPage();
+        });
+    
+    // Load countdown widget
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            // Create a container for the countdown if it doesn't exist
+            let countdownContainer = document.querySelector('.right-sidebar');
+            if (!countdownContainer) {
+                countdownContainer = document.createElement('div');
+                countdownContainer.className = 'right-sidebar';
+                document.body.appendChild(countdownContainer);
+            }
+            countdownContainer.innerHTML = data;
+            
+            // Initialize countdown
+            if (typeof updateCountdown === 'function') {
+                updateCountdown();
+            }
+        });
+});
+
 // Initialize navigation system
 const navigationManager = new NavigationManager();
 

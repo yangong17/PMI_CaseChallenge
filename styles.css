@@ -795,3 +795,133 @@ body {
     --gray-800: #000000;
   }
 } 
+
+/* Right Sidebar */
+.right-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: #f8fafc;
+    padding: 20px;
+    border-left: 1px solid #e2e8f0;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Countdown Widget */
+.countdown-widget {
+    margin-top: 20px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.current-date {
+    margin-bottom: 25px;
+}
+
+.date-display {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #4299e1, #2b6cb0);
+    border-radius: 8px;
+    color: white;
+}
+
+.date-display h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.date-display p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.progress-section {
+    padding: 15px 0;
+}
+
+.progress-container {
+    margin-bottom: 25px;
+}
+
+.progress-label {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e2e8f0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+#progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4299e1, #2b6cb0);
+    transition: width 0.5s ease;
+    position: relative;
+}
+
+.progress-text {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: white;
+    font-weight: 600;
+}
+
+.countdown-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.next-module, .final-deadline {
+    padding: 15px;
+    background-color: #f7fafc;
+    border-radius: 8px;
+    border-left: 4px solid #4299e1;
+}
+
+.next-module h4, .final-deadline h4 {
+    font-size: 0.9rem;
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.next-module p, .final-deadline p {
+    font-size: 0.85rem;
+    color: #4a5568;
+    line-height: 1.4;
+}
+
+.final-deadline {
+    border-left-color: #2b6cb0;
+}
+
+/* Adjust main content margin for right sidebar */
+.main-content {
+    margin-left: 300px; /* Only nav sidebar width */
+    margin-right: 300px; /* Right sidebar width + padding */
+    padding: 20px;
+}
+
+/* Remove left sidebar styles */
+.left-sidebar {
+    display: none;
+} 
