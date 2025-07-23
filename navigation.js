@@ -488,35 +488,58 @@ navStyles.textContent = `
 
 document.head.appendChild(navStyles);
 
-// Load both navigation and countdown widgets
-document.addEventListener('DOMContentLoaded', function() {
-    // Load navigation
-    fetch('nav.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('nav-placeholder').innerHTML = data;
-            highlightCurrentPage();
-        });
-    
-    // Load countdown widget
-    fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-            // Create a container for the countdown if it doesn't exist
-            let countdownContainer = document.querySelector('.right-sidebar');
-            if (!countdownContainer) {
-                countdownContainer = document.createElement('div');
-                countdownContainer.className = 'right-sidebar';
-                document.body.appendChild(countdownContainer);
-            }
-            countdownContainer.innerHTML = data;
-            
-            // Initialize countdown
-            if (typeof updateCountdown === 'function') {
-                updateCountdown();
-            }
-        });
-});
+// Function to load external script
+function loadScript(src) {
+    return new Promise((resolve, reject) => {
+        if (document.querySelector(`script[src="${src}"]`)) {
+            resolve(); // Script already loaded
+            return;
+        }
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.body.appendChild(script);
+    });
+}
+
+// Initialize all components
+async function initializeApp() {
+    try {
+        // Load navigation
+        const navResponse = await fetch('nav.html');
+        const navHtml = await navResponse.text();
+        document.getElementById('nav-placeholder').innerHTML = navHtml;
+        
+        // Load countdown widget
+        const headerResponse = await fetch('header.html');
+        const headerHtml = await headerResponse.text();
+        let countdownContainer = document.querySelector('.right-sidebar');
+        if (!countdownContainer) {
+            countdownContainer = document.createElement('div');
+            countdownContainer.className = 'right-sidebar';
+            document.body.appendChild(countdownContainer);
+        }
+        countdownContainer.innerHTML = headerHtml;
+
+        // Load required scripts in order
+        await loadScript('config.js');
+        await loadScript('countdown.js');
+
+        // Initialize countdown after all scripts are loaded
+        if (typeof updateCountdown === 'function') {
+            updateCountdown();
+        }
+
+        // Highlight current page in navigation
+        highlightCurrentPage();
+    } catch (error) {
+        console.error('Error initializing app:', error);
+    }
+}
+
+// Start initialization when DOM is ready
+document.addEventListener('DOMContentLoaded', initializeApp);
 
 // Initialize navigation system
 const navigationManager = new NavigationManager();
