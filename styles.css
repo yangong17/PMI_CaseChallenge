@@ -874,3 +874,45 @@ body {
 .left-sidebar {
     display: none;
 } 
+
+/* Case Image Styling */
+.case-image {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.overview-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} 
+
+/* Initiation Overview Styling */
+.initiation-overview h3 {
+    color: #2d3748;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.initiation-overview ul {
+    margin-bottom: 2rem;
+}
+
+.initiation-overview ol {
+    margin-top: 1.5rem;
+    padding-left: 2.5rem;
+}
+
+.initiation-overview ol li {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.initiation-overview ol li strong {
+    color: #2d3748;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+} 
