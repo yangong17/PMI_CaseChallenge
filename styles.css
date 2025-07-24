@@ -634,6 +634,76 @@ body {
     background-color: #f7fafc;
 }
 
+/* Content Section Styling */
+.content-section {
+    margin-bottom: 2rem;
+}
+
+.section-content h2 {
+    color: #2d3748;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #90cdf4;
+}
+
+.section-content h2:first-child {
+    margin-top: 0;
+}
+
+.section-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.section-content ul {
+    margin-bottom: 2rem;
+}
+
+/* Resource Category Styling */
+.resource-category {
+    margin-bottom: 2rem;
+}
+
+.resource-category h3 {
+    color: #2d3748;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.document-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;  /* Align items to the start of the container */
+}
+
+.document-link {
+    display: inline-flex;  /* Changed to inline-flex */
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    color: #2d3748;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;  /* Keep text in one line */
+}
+
+.document-link:hover {
+    background-color: #edf2f7;
+    border-color: #cbd5e0;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.document-link .icon {
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+} 
+
 /* ==========================================================================
    RESPONSIVE DESIGN
    ========================================================================== */
@@ -915,4 +985,45 @@ body {
     display: block;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
+} 
+
+/* Resource Section Styling */
+.resource-category {
+    margin-bottom: 2rem;
+}
+
+.resource-category h3 {
+    color: #2d3748;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.document-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.document-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    color: #2d3748;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.document-link:hover {
+    background-color: #edf2f7;
+    border-color: #cbd5e0;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.document-link .icon {
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
 } 
