@@ -679,6 +679,13 @@ body {
     align-items: flex-start;  /* Align items to the start of the container */
 }
 
+.document-links-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
 .document-link {
     display: inline-flex;  /* Changed to inline-flex */
     align-items: center;
