@@ -12,20 +12,50 @@
     <main class="main-content">
         <h1>2.4.2. Simulating the Uncertain</h1>
         
-        <section class="uncertainty-overview">
-            <h2>Cost Uncertainty Analysis</h2>
-            <p class="placeholder-text">[Content to be filled in - Cost uncertainty analysis methodology]</p>
-        </section>
+        <section class="content-section">
+            <div class="section-content">
+                <h2>Scenario Continuation</h2>
+                <p>Now that we've identified potential risks, the next step is to quantify their financial impact. Using the cost range and likelihood of each risk, we can use <b>Monte Carlo simulations</b> to determine how much contingency buffer should be added to the project budget.</p>
 
-        <section class="uncertainty-elements">
-            <h2>Uncertainty Analysis Elements</h2>
-            <ul>
-                <li>Monte Carlo Simulation</li>
-                <li>Three-Point Estimation</li>
-                <li>Contingency Planning</li>
-                <li>Management Reserve</li>
-                <li>Cost Risk Assessment</li>
-            </ul>
+                <h2>What is a Monte Carlo Simulation?</h2>
+                <p>A Monte Carlo simulation is a method that uses random sampling to show how a project's costs might vary based on risk. By running many simulations, we can estimate the total risk cost and see how much budget we need to be confident we've covered it - for example, having enough budget 50% (P50) or 90% (P90) of the time.</p>
+                
+                <p>Review the risk data provided by the Plant Manager, including cost ranges and likelihoods, and use it to calculate the P50 and P90 total risk cost estimates.</p>
+
+                <div class="tip-box">
+                    <h3>Tip</h3>
+                    <p>This can be done effectively in Python using Google Colab, where you can build a simulation using random sampling techniques based on the triangular distributions provided.</p>
+                </div>
+
+                <h2>Objective</h2>
+                <ul>
+                    <li>Use Monte Carlo simulation to calculate P50 (median) and P90 (conservative) cost estimates for project risk.</li>
+                    <li>Generate and visualize the distribution of total risk costs using a histogram or similar chart.</li>
+                </ul>
+
+                <h2>Resources</h2>
+                <div class="resource-category">
+                    <h3>Memos</h3>
+                    <div class="document-links">
+                        <div class="document-links-group">
+                            <a href="memos/Memo_6_PlantManager_RiskMatrix.pdf" class="document-link" target="_blank">
+                                <span class="icon">📄</span>
+                                Memo from Plant Manager
+                            </a>
+                        </div>
+                    </div>
+
+                    <h3>Tools</h3>
+                    <div class="document-links">
+                        <div class="document-links-group">
+                            <a href="https://colab.research.google.com/" class="document-link" target="_blank">
+                                <span class="icon">🔧</span>
+                                Google Colab
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <div class="navigation-buttons">
