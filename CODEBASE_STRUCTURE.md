@@ -35,7 +35,7 @@ This document provides a comprehensive overview of the PMI Case Study Challenge 
 
 #### 3. Execution Phase
 - `execution.html`
-- `surprise-problem.html` (3.1KB)
+- `unexpected-obstacle.html` (3.1KB)
 - `change-request.html`
 
 #### 4. Control Phase

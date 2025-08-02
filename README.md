@@ -40,7 +40,7 @@ PMI_CaseStudyChallenge/
 │
 ├── 3. Execution/
 ├── ├── execution.html      # Phase overview
-├── ├── surprise-problem.html # 3.1 Unexpected Obstacle (3 scenarios)
+├── ├── unexpected-obstacle.html # 3.1 Unexpected Obstacle (3 scenarios)
 ├── ├── change-request.html # 3.2 Responding to Change
 ├── └── update-gantt.html  # 3.3 Adjusting the Timeline
 │
