@@ -13,18 +13,19 @@
         <h1>3.1. Unexpected Obstacle</h1>
         
         <section class="surprise-overview">
-            <h2>Unexpected Obstacle Introduction</h2>
-            <p class="placeholder-text">[Content to be filled in - Introduction to unexpected obstacles in project management]</p>
+            <h2>Scenario Continuation</h2>
+            <p>The paint booth has been approved by TractorCo’s corporate office and is enroute to the facility. 
+                However, the team is suddenly faced with a surprise scenario:</p>
         </section>
 
-        <section class="scenario-selection">
-            <h2>Select Your Scenario</h2>
-            <p>Click one of the mystery buttons below to reveal your unexpected obstacle scenario:</p>
+        <section id="passcode-section" class="scenario-selection">
+            <h2>Enter Your Scenario Passcode</h2>
+            <p>Please enter your assigned passcode to reveal your unique scenario:</p>
             
-            <div class="scenario-buttons">
-                <button class="mystery-button" onclick="revealScenario(1)">Mystery Button 1</button>
-                <button class="mystery-button" onclick="revealScenario(2)">Mystery Button 2</button>
-                <button class="mystery-button" onclick="revealScenario(3)">Mystery Button 3</button>
+            <div class="passcode-input">
+                <input type="text" id="passcode" placeholder="Enter passcode" maxlength="3">
+                <button onclick="checkPasscode()" class="submit-button">Submit</button>
+                <p id="error-message" class="error" style="display: none; color: red;">Invalid passcode. Please try again.</p>
             </div>
         </section>
 
@@ -52,6 +53,32 @@
 
     <script src="navigation.js"></script>
     <script>
+        // Passcode mappings
+        const PASSCODE_MAP = {
+            'aaa': 1,
+            'bbb': 2,
+            'ccc': 3
+        };
+
+        // Storage key for localStorage
+        const STORAGE_KEY = 'selectedScenario';
+
+        function checkPasscode() {
+            const passcode = document.getElementById('passcode').value.toLowerCase();
+            const scenarioNumber = PASSCODE_MAP[passcode];
+            
+            if (scenarioNumber) {
+                // Valid passcode
+                localStorage.setItem(STORAGE_KEY, scenarioNumber);
+                revealScenario(scenarioNumber);
+                document.getElementById('passcode-section').style.display = 'none';
+                document.getElementById('error-message').style.display = 'none';
+            } else {
+                // Invalid passcode
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+
         function revealScenario(scenarioNumber) {
             // Hide all scenarios first
             document.querySelectorAll('.scenario-content').forEach(scenario => {
@@ -60,13 +87,32 @@
             
             // Show the selected scenario
             document.getElementById('scenario-' + scenarioNumber).style.display = 'block';
-            
-            // Update button styles to show which one was selected
-            document.querySelectorAll('.mystery-button').forEach(button => {
-                button.classList.remove('selected');
-            });
-            event.target.classList.add('selected');
         }
+
+        // Handle page load and URL parameters
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for reset parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('reset')) {
+                localStorage.removeItem(STORAGE_KEY);
+                // Remove the reset parameter from URL without refreshing
+                window.history.replaceState({}, '', window.location.pathname);
+            }
+
+            // Check localStorage for existing scenario
+            const savedScenario = localStorage.getItem(STORAGE_KEY);
+            if (savedScenario) {
+                document.getElementById('passcode-section').style.display = 'none';
+                revealScenario(savedScenario);
+            }
+
+            // Add enter key support for passcode input
+            document.getElementById('passcode').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    checkPasscode();
+                }
+            });
+        });
     </script>
 </body>
 </html>
