@@ -12,23 +12,56 @@
     <main class="main-content">
         <h1>3.2. Responding to Change</h1>
         
-        <section class="change-overview">
-            <h2>Change Request Process</h2>
-            <p class="placeholder-text">[Content to be filled in - Change request methodology and process]</p>
+        <section id="locked-content" class="content-section" style="display: none;">
+            <div class="section-content text-center">
+                <h2>Please unlock your scenario first</h2>
+                <p style="margin: 2em 0;">You need to unlock a scenario before accessing this content.</p>
+                <a href="unexpected-obstacle.html" class="button">Go to unlock scenario</a>
+            </div>
         </section>
 
-        <section class="change-elements">
-            <h2>Change Request Elements</h2>
-            <ul>
-                <li>Change Request Documentation</li>
-                <li>Impact Analysis</li>
-                <li>Change Control Board Review</li>
-                <li>Approval Process</li>
-                <li>Implementation Planning</li>
-            </ul>
+        <section id="scenario-content" class="content-section" style="display: none;">
+            <div class="section-content">
+                <h2>Scenario 1: Fire Marshal Adds Equipment Requirement</h2>
+                <p>Your team is midway through execution when the unexpected happens. During the facility inspection, the fire marshal informs you that a Double Check Detector Assembly (DCDA) is now required for backflow prevention. This component is essential to obtain final approval for your sprinkler system - but it was not included in the original scope or budget due to it being a new permit requirement.</p>
+
+                <p>The DCDA will:</p>
+                <ul>
+                    <li>Add approximately $15,000 to your project cost (equipment, labor, and re-inspection)</li>
+                    <li>Take up to 30 days to order and install, potentially delaying downstream tasks</li>
+                </ul>
+
+                <h2>Objective</h2>
+                <p>A completed Change Request Form including:</p>
+                <ul>
+                    <li>A brief description of the issue and trigger event</li>
+                    <li>An analysis of scope, schedule, and cost impact</li>
+                    <li>Options considered (e.g., deferral, value engineering, vendor negotiation)</li>
+                    <li>Your team's recommended action</li>
+                </ul>
+
+                <h2>Challenge Prompts (Discuss as a Team)</h2>
+                <ul>
+                    <li>Could the requirement be met through a different type of fire suppression system or engineering workaround?</li>
+                    <li>What options might reduce the delay or cost, even if they involve trade-offs?</li>
+                </ul>
+
+                <h2>Resources</h2>
+                <div class="resource-category">
+                    <h3>Templates</h3>
+                    <div class="document-links">
+                        <div class="document-links-group">
+                            <a href="templates/3.2_ChangeRequestFormTemplate.docx" class="document-link">
+                                <span class="icon">📋</span>
+                                Change Request Template
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <div class="navigation-buttons">
+        <div id="navigation-buttons" class="navigation-buttons" style="display: none;">
             <a href="update-gantt.html" class="button">Next: Adjusting the Timeline</a>
         </div>
     </main>
@@ -36,5 +69,30 @@
     <div class="right-sidebar"></div>
 
     <script src="navigation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectedScenario = localStorage.getItem('selectedScenario');
+            const lockedContent = document.getElementById('locked-content');
+            const scenarioContent = document.getElementById('scenario-content');
+            const navigationButtons = document.getElementById('navigation-buttons');
+
+            if (selectedScenario === '1') {
+                // Show Scenario 1 content
+                lockedContent.style.display = 'none';
+                scenarioContent.style.display = 'block';
+                navigationButtons.style.display = 'block';
+            } else {
+                // Show locked content
+                lockedContent.style.display = 'block';
+                scenarioContent.style.display = 'none';
+                navigationButtons.style.display = 'none';
+            }
+        });
+    </script>
+    <style>
+        .text-center {
+            text-align: center;
+        }
+    </style>
 </body>
 </html> 
