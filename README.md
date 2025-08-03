@@ -51,8 +51,7 @@ PMI_CaseStudyChallenge/
 └── 5. Closure/
     ├── closure.html       # Phase overview
     ├── final-presentation.html # 5.1 Final Presentation
-    ├── final-summary.html # 5.1.1 Final Summary
-    └── lessons-learned.html # 5.1.2 Lessons Learned
+    └── final-submission-instructions.html # Final Submission Instructions
 ```
 
 ## 🎨 Design System

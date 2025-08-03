@@ -381,8 +381,18 @@ body {
 .navigation-buttons {
   display: flex;
   justify-content: center;
-  margin-top: var(--space-1);
-  gap: var(--space-4);
+  margin-top: var(--space-8);
+  gap: var(--space-8);
+  width: 100%;
+}
+
+.navigation-buttons.single-button {
+  justify-content: center;
+}
+
+.navigation-buttons .button.back {
+  background: #dddddd;
+  color: var(--gray-900);
 }
 
 /* Mystery Button System */
@@ -993,6 +1003,49 @@ body {
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
 } 
+
+/* Submission Section Styling */
+.submission-section {
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+.submission-section .info-box {
+    background: linear-gradient(135deg, var(--primary-50), white);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--primary-200);
+    box-shadow: var(--shadow-md);
+}
+
+.submission-section h3 {
+    color: var(--primary-800);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+.submission-section h4 {
+    color: var(--primary-700);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: var(--space-4) 0 var(--space-2);
+}
+
+.submission-section p {
+    margin-bottom: var(--space-2);
+    color: var(--gray-700);
+}
+
+.submission-section ol {
+    margin: var(--space-4) 0;
+    padding-left: var(--space-8);
+}
+
+.submission-section ol li {
+    margin-bottom: var(--space-2);
+    color: var(--gray-700);
+}
 
 /* Resource Section Styling */
 .resource-category {

@@ -156,8 +156,9 @@
             </div>
         </section>
 
-        <div id="navigation-buttons" class="navigation-buttons" style="display: none;">
-            <a href="update-gantt.html" class="button">Next: Adjusting the Timeline</a>
+        <div id="navigation-buttons" class="navigation-buttons">
+            <a href="unexpected-obstacle.html" class="button back">⟵ Back: Unexpected Obstacle</a>
+            <a href="update-gantt.html" class="button">Next: Adjusting the Timeline ⟶</a>
         </div>
     </main>
 
@@ -174,11 +175,11 @@
             const navigationButtons = document.getElementById('navigation-buttons');
 
             // Hide all content sections initially
-            lockedContent.style.display = 'none';
-            scenario1Content.style.display = 'none';
-            scenario2Content.style.display = 'none';
-            scenario3Content.style.display = 'none';
-            navigationButtons.style.display = 'none';
+            if (lockedContent) lockedContent.style.display = 'none';
+            if (scenario1Content) scenario1Content.style.display = 'none';
+            if (scenario2Content) scenario2Content.style.display = 'none';
+            if (scenario3Content) scenario3Content.style.display = 'none';
+            if (navigationButtons) navigationButtons.style.display = 'none';
 
             // Show appropriate content based on selected scenario
             switch(selectedScenario) {
@@ -202,6 +203,11 @@
     <style>
         .text-center {
             text-align: center;
+        }
+        .navigation-buttons {
+            align-self: center;
+            width: auto;
+            gap: 6em;  /* Adjust this value to increase/decrease space between buttons */
         }
     </style>
 </body>
