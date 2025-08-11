@@ -957,6 +957,10 @@ body {
     padding: 20px;
 }
 
+.main-content h1 + h2 {
+    margin-top: -10px; /* Reduce space between h1 and h2 */
+}
+
 /* Remove left sidebar styles */
 .left-sidebar {
     display: none;

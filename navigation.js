@@ -121,7 +121,7 @@ class NavigationManager {
     renderFallbackNavigation() {
         const fallbackNav = `
             <nav class="sidebar">
-                <h1>PMI-LA Case Challenge</h1>
+                <h1>Project Management Case Challenge</h1>
                 <div class="error-message">
                     <p>Navigation temporarily unavailable</p>
                     <button onclick="location.reload()" class="button">Reload Page</button>
