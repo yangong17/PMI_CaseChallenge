@@ -14,7 +14,8 @@ A comprehensive, modern web-based project management lifecycle experience design
 
 ```
 PMI_CaseStudyChallenge/
-├── index.html              # Landing page
+├── index.html              # Registration landing page
+├── challenge.html          # Main challenge portal page
 ├── nav.html                 # Navigation component
 ├── styles.css               # Modern CSS with design system
 ├── navigation.js            # Enhanced navigation system

@@ -51,8 +51,8 @@ class NavigationManager {
      */
     getCurrentPage() {
         const path = window.location.pathname;
-        const page = path.split('/').pop() || 'index.html';
-        return page.includes('.html') ? page : 'index.html';
+        const page = path.split('/').pop() || 'challenge.html';
+        return page.includes('.html') ? page : 'challenge.html';
     }
 
     /**

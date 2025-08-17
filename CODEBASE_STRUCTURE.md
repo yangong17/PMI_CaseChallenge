@@ -6,7 +6,8 @@ This document provides a comprehensive overview of the PMI Case Study Challenge 
 ## Core Files
 | File | Size | Purpose |
 |------|------|---------|
-| `index.html` | 6.2KB | Main entry point and landing page |
+| `index.html` | 4.8KB | Registration landing page |
+| `challenge.html` | 6.2KB | Main challenge portal page |
 | `navigation.js` | 14KB | Core navigation and interactivity |
 | `styles.css` | 17KB | Global styling and layout |
 | `nav.html` | 3.3KB | Navigation template |
@@ -56,7 +57,8 @@ This document provides a comprehensive overview of the PMI Case Study Challenge 
   2. `navigation.js` (14KB)
   3. `guidelines.html` (12KB)
   4. `about.html` (7.1KB)
-  5. `index.html` (6.2KB)
+  5. `index.html` (4.8KB) - Registration landing page
+  6. `challenge.html` (6.2KB) - Main challenge portal page
 
 - Standard Page Size:
   - Most content pages are approximately 1.2-1.3KB
