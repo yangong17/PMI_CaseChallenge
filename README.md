@@ -149,11 +149,11 @@ For technical issues or questions:
 
 - **PMI-LA Community**: Discord channel
 - **Office Hours**: Tuesday & Thursday, 6-8 PM PST
-- **Email**: pmi-la@example.com
+- **Email**: outreach@pmi-la.org
 
 ## 📝 License
 
-Educational use only. Property of PMI-LA in collaboration with UCLA Department of Statistics and USC School of Engineering.
+Educational use only.
 
 ---
 
