@@ -21,6 +21,11 @@
         }
 
         /* Card Styles */
+        .event-card p,
+        .event-card h3 {
+            text-align: left !important;
+        }
+
         .event-card, .how-it-works-section, .prize-section, .learning-outcomes-section, .faq-section {
             background: rgba(0, 0, 0, 0.02);
             border-radius: 8px;
@@ -131,16 +136,18 @@
 
         h2 {
             color: #000;
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 3.2rem;
+            margin-bottom: 0.75rem;
             font-weight: bold;
+            line-height: 1.2;
         }
 
         .subtitle {
             color: #222;
-            font-size: 1.5rem;
+            font-size: 2rem;
             margin-bottom: 2rem;
             font-weight: normal;
+            line-height: 1.3;
         }
 
         h3 {
@@ -282,6 +289,7 @@
             border-collapse: collapse;
             margin: 1rem 0;
             text-align: left;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
 
         td {
@@ -293,7 +301,12 @@
         td:first-child {
             width: 200px;
             background: rgba(0, 0, 0, 0.02);
+        }
+
+        td:first-child strong {
+            font-family: inherit;
             font-weight: bold;
+            font-size: 1.1rem;
         }
 
         .pmi-infinity-section p {
@@ -477,23 +490,23 @@
             <h3>FAQ</h3>
             <details>
                 <summary>Who can participate?</summary>
-                <p>Open to everyone, but designed for students and early-career professionals with minimal project management experience.</p>
+                <p>Open to everyone, but this challenge was designed for students and early-career professionals with minimal project management experience.</p>
             </details>
             <details>
                 <summary>Is it free?</summary>
-                <p>Yes — participation is completely free.</p>
+                <p>Yes - participation is completely free.</p>
             </details>
             <details>
                 <summary>Will I earn any PDUs?</summary>
-                <p>No — this challenge is focused on experience and networking, not credential maintenance.</p>
+                <p>Unfortunately, no.</p>
             </details>
             <details>
                 <summary>What’s the time commitment?</summary>
-                <p>Expect about 3–5 hours per week, depending on your team’s pace.</p>
+                <p>Expect about 2–5 hours per week, depending on your team’s pace.</p>
             </details>
             <details>
                 <summary>Do I need prior experience?</summary>
-                <p>No — templates and guidance will be provided. You just need curiosity and willingness to learn.</p>
+                <p>No - templates and guidance will be provided, but you will be expected to conduct your own research and apply critical thinking.</p>
             </details>
         </div>
 
