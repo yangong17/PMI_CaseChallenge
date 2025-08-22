@@ -20,6 +20,82 @@
             padding: 0;
         }
 
+        /* Card Styles */
+        .event-card, .how-it-works-section, .prize-section, .learning-outcomes-section, .faq-section {
+            background: rgba(0, 0, 0, 0.02);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .event-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .event-detail {
+            padding: 1.25rem;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .event-detail strong {
+            display: block;
+            color: #1976d2;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-detail p {
+            margin: 0;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        /* Countdown Styles */
+        #countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .countdown-unit {
+            background: #1976d2;
+            color: white;
+            padding: 0.75rem;
+            border-radius: 8px;
+            min-width: 80px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .countdown-number {
+            display: block;
+            font-size: 1.75rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .countdown-label {
+            display: block;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+
+        #countdown.live {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1976d2;
+        }
+
         .landing-content {
             max-width: 1200px;
             margin: 2rem auto;
@@ -141,7 +217,7 @@
 
         .button-container {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             gap: 1rem;
             margin-top: 2rem;
             align-items: center;
@@ -149,19 +225,19 @@
 
         .register-button {
             display: inline-block;
-            padding: 1rem 3rem;
+            padding: 1rem 2rem;
             font-size: 1.2rem;
             font-weight: bold;
             text-decoration: none;
             border-radius: 8px;
             transition: all 0.3s ease;
-            min-width: 300px;
+            min-width: 240px;
             text-align: center;
         }
 
         .primary-button {
-            background: white;
-            color: #0078d4;
+            background: #1976d2;
+            color: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
@@ -183,18 +259,7 @@
             text-decoration: none;
         }
 
-        .overview-section,
-        .key-highlights-section,
-        .learning-outcomes-section,
-        .challenge-structure-section,
-        .pmi-infinity-section,
-        .prize-section {
-            margin: 2rem 0;      /* Keep the spacing between sections */
-            padding: 1rem 2rem;  /* Reduced top/bottom padding from 1.5rem to 1rem, kept left/right at 2rem */
-            background: rgba(0, 0, 0, 0.02);
-            border-radius: 8px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
+        /* Section styles handled by unified card styles */
 
         .overview-section p {
             text-align: left;
@@ -243,6 +308,83 @@
         .prize-section h3 {
             color: #000000;
         }
+
+        /* New layout styles */
+        .hero {
+            margin-bottom: 2rem;
+        }
+
+        .subheadline p {
+            margin: 0.25rem 0;
+            font-size: 1.1rem;
+            color: #222;
+        }
+
+        .why-join-section,
+        .how-it-works-section,
+        .faq-section,
+        .footer-cta {
+            margin: 2rem 0;
+            padding: 1rem 2rem;
+            background: rgba(0, 0, 0, 0.02);
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .why-join-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .why-join-section li {
+            margin: 0.5rem 0;
+            text-align: left;
+        }
+
+        .how-it-works-section ol {
+            margin: 0 0 1rem 1.25rem;
+            text-align: left;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .timeline-step {
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .timeline-step .icon {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-section details {
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            margin: 0.5rem 0;
+            text-align: left;
+        }
+
+        .faq-section summary {
+            cursor: pointer;
+            font-weight: bold;
+            outline: none;
+        }
+
+        .footer-cta .register-button {
+            min-width: 320px;
+        }
     </style>
 </head>
 <body>
@@ -255,41 +397,65 @@
                 <img src="images/UCLA_MastersAppliedStatisticsLogoLarge.png" alt="UCLA Masters in Applied Statistics Logo">
             </a>
         </div>
+        
         <h1>PMI-LA Presents:</h1>
         <h2>The Project Management Case Challenge</h2>
         <h3 class="subtitle">A Full-Cycle Project Management Simulation</h3>
-        
+
+        <div class="button-container">
+            <a href="https://forms.office.com/r/KVxAJGcPi6" class="register-button primary-button">Register Now</a>
+            <a href="#" class="register-button disabled-button">Challenge Unlocks on Sept 8th 2025</a>
+        </div>
+
         <div class="event-details">
             <h3>Event Information</h3>
             <p><strong>Duration:</strong> September 8 - October 6, 2025</p>
-            <p><strong>Format:</strong> Fully virtual — participate from anywhere</p>
+            <p><strong>Format:</strong> Fully virtual - participate from anywhere</p>
             <p><strong>Developed by:</strong> PMI-LA in collaboration with UCLA's Master's in Applied Statistics & Data Science Program</p>
         </div>
+        
 
-        <div class="overview-section">
-            <h3>Challenge Overview</h3>
-            <p>The <b>Project Management Case Challenge</b> is a simulated learning experience designed to provide participants with hands-on experience working through a complete project lifecycle, from initiation to closure, guided by PMI best practices and methodologies.</p>
-            <p>While each scenario includes scaffolding in the form of templates and resources, the challenge is designed to encourage independent problem-solving. You will be expected to conduct your own research, apply critical thinking, and leverage learning tools such as <strong><a href="https://www.pmi.org/infinity" target="_blank">PMI Infinity</a></strong> to develop and deliver your project outputs - mirroring the realities of professional project work.</p>
-            <p>At the end of this challenge, you will deliver a final presentation showcasing your project management journey and the skills you learned, serving as a valuable artifact for your professional portfolio.</p>
-            <p>Content was developed using PMI's PM Body of Knowledge (PMBOK®), and in collaboration with UCLA's Master's in Applied Statistics & Data Science Program.</p>
-        </div>
 
-        <div class="key-highlights-section">
-            <h3>Key Highlights</h3>
-            <div class="key-points">
-                <div class="key-point">
-                    <h4>Real-world Application</h4>
-                    <p>Work through a realistic business case that mirrors actual project management challenges</p>
+        <div class="event-card">
+            <h3>Why Join?</h3>
+            <div class="event-card-grid">
+                <div class="event-detail">
+                    <strong>Hands-on Experience</strong>
+                    <p>Create real project deliverables like charters, work breakdown structures, risk visualizations, and more</p>
                 </div>
-                <div class="key-point">
-                    <h4>PMI Best Practices</h4>
-                    <p>Apply PMBOK® principles throughout the project lifecycle</p>
+                <div class="event-detail">
+                    <strong>Industry Tools</strong>
+                    <p>Learn to apply professional project management tools and methodologies</p>
                 </div>
-                <div class="key-point">
-                    <h4>Hands-on Experience</h4>
-                    <p>Create actual project deliverables including project charters, work breakdown structures, Gantt charts, and risk visualizations</p>
+                <div class="event-detail">
+                    <strong>Network Growth</strong>
+                    <p>Connect with peers and industry professionals in the PM community</p>
                 </div>
             </div>
+        </div>
+
+        <div class="how-it-works-section">
+            <h3>How It Works</h3>
+
+            <div class="timeline">
+                <div class="timeline-step"><span class="icon">👥</span><strong>Form Team</strong><br>Find peers or go solo</div>
+                <div class="timeline-step"><span class="icon">📝</span><strong>Register</strong><br>Secure your spot</div>
+                <div class="timeline-step"><span class="icon">📚</span><strong>Learn</strong><br>Work through 11 guided modules</div>
+                <div class="timeline-step"><span class="icon">🎤</span><strong>Present</strong><br>Share your journey and outcomes</div>
+            </div>
+        </div>
+
+        <div class="prize-section">
+            <h3>🏆 Prize</h3>
+            <p>The team with the best final presentation will receive complimentary tickets to <strong><a href="https://pmi-la.org/calendar?eventId=408" target="_blank">PMI-LA's Professional Development Day</a></strong> on October 25, 2025</p>
+        </div>
+
+        <div class="event-card">
+            <h3>Challenge Overview</h3>
+            <p>The <strong>Project Management Case Challenge</strong> is a simulated learning experience designed to provide participants with hands-on experience working through a complete project lifecycle, from initiation to closure, guided by PMI best practices and methodologies.</p>
+            <p>While each scenario includes guidance in the form of templates and resources, the challenge is designed to encourage independent problem-solving. You will be expected to conduct your own research, apply critical thinking, and leverage learning tools such as <strong><a href="https://www.pmi.org/infinity" target="_blank">PMI Infinity</a></strong> to develop and deliver your project outputs - mirroring the realities of professional project work.</p>
+            <p>At the end of this challenge, you will deliver a final presentation showcasing your project management journey and the skills you learned, serving as a valuable artifact for your professional portfolio.</p>
+            <p>Content was developed using PMI's PM Body of Knowledge (PMBOK®), and in collaboration with UCLA's Master's in Applied Statistics & Data Science Program.</p>
         </div>
 
         <div class="learning-outcomes-section">
@@ -307,20 +473,35 @@
         </div>
 
 
-        <div class="pmi-infinity-section">
-            <h3>PMI Infinity</h3>
-            <p>To support you throughout this project, you'll have access to <strong><a href="https://www.pmi.org/infinity" target="_blank">PMI Infinity</a></strong> — an AI-powered project management coach built to help professionals navigate complex challenges. PMI Infinity offers real-time guidance and tailored insights drawn from a growing knowledge base of over 15,000 pieces of expert- and community-vetted content, including PMBOK® guidance, case studies, and best practices.</p>
+        <div class="faq-section">
+            <h3>FAQ</h3>
+            <details>
+                <summary>Who can participate?</summary>
+                <p>Open to everyone, but designed for students and early-career professionals with minimal project management experience.</p>
+            </details>
+            <details>
+                <summary>Is it free?</summary>
+                <p>Yes — participation is completely free.</p>
+            </details>
+            <details>
+                <summary>Will I earn any PDUs?</summary>
+                <p>No — this challenge is focused on experience and networking, not credential maintenance.</p>
+            </details>
+            <details>
+                <summary>What’s the time commitment?</summary>
+                <p>Expect about 3–5 hours per week, depending on your team’s pace.</p>
+            </details>
+            <details>
+                <summary>Do I need prior experience?</summary>
+                <p>No — templates and guidance will be provided. You just need curiosity and willingness to learn.</p>
+            </details>
         </div>
 
-        <div class="prize-section">
-            <h3>🏆 Prize</h3>
-            <p>The team with the best final presentation will receive complimentary tickets to <strong><a href="https://pmi-la.org/calendar?eventId=408" target="_blank">PMI-LA's Professional Development Day</a></strong> on October 25, 2025</p>
-        </div>
 
-        <div class="button-container">
-            <a href="https://forms.office.com/r/KVxAJGcPi6" class="register-button primary-button">Register Here</a>
-            <a href="#" class="register-button disabled-button">Challenge Unlocks on Sept 6th 2025</a>
-        </div>
+            <div class="button-container">
+                <a href="https://forms.office.com/r/KVxAJGcPi6" class="register-button primary-button">Register Now</a>
+            </div>
+
 
 
         <!-- <p>(Press 't' to access challenge portal)</p> -->
@@ -356,7 +537,7 @@
                 disabledButton.style.color = '#666';
                 disabledButton.style.border = '2px solid #ccc';
                 disabledButton.style.cursor = 'not-allowed';
-                disabledButton.textContent = 'Challenge Unlocks on Sept 6th 2025';
+                disabledButton.textContent = 'Challenge Unlocks on Sept 8th 2025';
             }
         }
 
