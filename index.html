@@ -240,6 +240,8 @@
             transition: all 0.3s ease;
             min-width: 240px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
         .primary-button {
@@ -251,6 +253,38 @@
         .primary-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+
+        /* Modified shimmer effect to only trigger on hover */
+        .primary-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                rgba(255,255,255,0) 0%,
+                rgba(255,255,255,0.5) 50%,
+                rgba(255,255,255,0) 100%
+            );
+            transform: skewX(-20deg);
+            transition: left 0.5s;  /* Added for smooth initial state */
+        }
+
+        .primary-button:hover::before {
+            animation: shimmer 1s forwards;  /* Made animation faster and only run once */
+        }
+
+        @keyframes shimmer {
+            0% {
+                left: -75%;
+            }
+            100% {
+                left: 175%;
+            }
         }
 
         .disabled-button {
