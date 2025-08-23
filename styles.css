@@ -177,13 +177,13 @@ body {
 }
 
 .sidebar h1 {
-  font-size: 1.375rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: var(--space-6);
   color: var(--primary-800);
   text-align: center;
   padding-bottom: var(--space-4);
-  border-bottom: 2px solid var(--primary-200);
+  border-bottom: 4px solid var(--primary-200);
   background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -258,7 +258,6 @@ body {
 
 /* Navigation Intro Section Styling */
 .sidebar .intro-section a {
-    background-color: #bbddfd;  /* Light blue background */
     display: block;
     padding: 8px 12px;
     border-radius: 4px;
@@ -275,12 +274,6 @@ body {
 }
 
 /* Navigation Divider Styling */
-.nav-divider {
-    height: 2px;
-    background-color: #727272;
-    margin: 15px 0;
-    list-style: none;
-}
 
 /* Ensure divider spans full width */
 .sidebar ul .nav-divider {
@@ -642,6 +635,34 @@ body {
 
 .content-table tr:hover {
     background-color: #f7fafc;
+}
+
+/* Event Card Grid Styling */
+.event-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.event-detail {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.event-detail strong {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--primary-600);
+    font-size: 1.1rem;
+}
+
+.event-detail p {
+    margin: 0;
+    line-height: 1.5;
 }
 
 /* Content Section Styling */

@@ -31,8 +31,14 @@
         }
 
         /* Card Styles */
+        /* Default left alignment for event cards */
         .event-card p {
-            text-align: left !important;
+            text-align: left;
+        }
+        
+        /* Center alignment specifically for Why Join cards */
+        .event-card-grid .event-detail p {
+            text-align: center;
         }
         
         .event-card h3 {
@@ -448,16 +454,16 @@
         <div class="event-card">
             <h3>Why Join?</h3>
             
-            <div class="event-card-grid">
-                <div class="event-detail">
+            <div class="event-card-grid" style="text-align: center;">
+                <div class="event-detail" style="text-align: center;">
                     <strong>Hands-on Experience</strong>
                     <p>Create real project deliverables like charters, work breakdown structures, risk visualizations, and more</p>
                 </div>
-                <div class="event-detail">
+                <div class="event-detail" style="text-align: center;">
                     <strong>Industry Tools</strong>
-                    <p>Learn to apply professional project management tools and methodologies</p>
+                    <p>Learn to apply project management tools and methodologies</p>
                 </div>
-                <div class="event-detail">
+                <div class="event-detail" style="text-align: center;">
                     <strong>Network Growth</strong>
                     <p>Connect with peers and industry professionals in the PM community</p>
                 </div>
