@@ -69,7 +69,7 @@ function updateCountdown() {
     // Update next milestone
     if (nextMilestone) {
         const daysToNext = getDaysBetween(now, new Date(nextMilestone.date));
-        elements.nextModule.innerHTML = `${nextMilestone.name}: ${formatCountdown(daysToNext)}`;
+        elements.nextModule.innerHTML = `<b>${nextMilestone.name}</b><br>${formatCountdown(daysToNext)}`;
     } else {
         elements.nextModule.textContent = 'All modules available';
     }
