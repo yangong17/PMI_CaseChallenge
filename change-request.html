@@ -26,23 +26,33 @@
         <section id="scenario-1-content" class="content-section" style="display: none;">
             <div class="section-content">
                 <h2>Scenario: Fire Marshal Adds Equipment Requirement</h2>
-                <p>Your team is midway through execution when the unexpected happens. During the facility inspection, the fire marshal informs you that 
+                <p>On day 7 of the <b>“Inspect Facility, Apply for Permits”</b> activity, during a facility inspection, the fire marshal informs you that 
                     a new Double Check Detector Assembly (DCDA) is now required for backflow prevention of the sprinkler system. This component is essential to obtain final approval
                      for your sprinkler system - but it was not included in the original scope or budget due to it being a new permit requirement.</p>
 
-                <p>The DCDA will:</p>
+                <p>Going with this option has the following implications:</p>
                 <ul>
-                    <li>Add approximately <b>$10,000</b> to your project cost (DCDA, installation materials, labor, and re-inspection)</li>
-                    <li>Add approximately <b>15 days</b> to order and install</li>
+                    <li>Add task: <b>Order DCDA (10 days)</b></li> 
+                    <li>Add task: <b>Install DCDA (5 days)</b></li>
+                    <li>DCDA must be completed before sprinklers can be installed</li>
+                    <li>Add <b>$8000</b> for the DCDA and other materials</li>
+                    <li>Add <b>$2000</b> for the installation labor</li>
                 </ul>
 
                 <p>The fire marshal also informs you of an alternative option: Installing a dry chemical suppression system instead of a sprinkler system. This would be a more cost-effective solution, 
-                    but may come with a longer schedule impact. Switching to the dry chemical system will:</p>
+                    but may come with a longer schedule impact. Switching to the dry chemical system has the following implications:</p>
                 <ul>
-                    <li>Add approximately <b>$6,000</b> to your project cost (Dry chemical suppression system, installation materials, labor, re-inspection)</li>
-                    <li>Add approximately <b>30 days</b> to order and install</li>
-                    <li>Minus the originally budgeted sprinkler installation costs</li>
+                    <li>Add task: <b>Order Dry Chem System (24 days)</b> (can happen while booth is in transit)</li>
+                    <li>Add task: <b>Install Dry Chem System (2 days)</b></li>
+                    <li>Remove task: <b>Sprinklers</b></li>
+                    <li>Dry Chem System can only be installed after the paint booth is installed
+                    <li>Dry Chem System must be installed before testing and calibration can occur</li>
+                    <li>Add <b>$5000</b> for the Dry Chem System and other materials</li>
+                    <li>Add <b>$1000</b> for the installation labor</li>
+                    <li>Remove <b>$5,000</b> for the sprinkler installation costs</li>
                 </ul>
+
+                <p>Because of the urgency of this matter, the General Manager requests an immediate decision on which option to choose, with the chosen path being executed the following day.</p>
 
                 <h2>Objective</h2>
                 <p>Complete a <b>Change Request Form</b> that includes:</p>
