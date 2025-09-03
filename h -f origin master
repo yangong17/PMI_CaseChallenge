@@ -1,0 +1,85 @@
+* [33maaac3e3[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m updated memos 1,7. Updated cost baseline diagram template, updated WBS section to clarify draw.io
+[31m|[m * [33ma478b5b[m[33m ([m[1;31morigin/master[m[33m)[m Update README.md
+[31m|[m * [33mac06230[m Update README.md
+[31m|[m[31m/[m  
+* [33m8f444f9[m minor wording updates
+* [33mb6a65e5[m updated memos 1,2,3,4
+* [33mbed9bc5[m memo updates, main section tweaks
+* [33m48fd34c[m updated stakeholder register
+* [33m1f33511[m refined scenario 1, DCDA
+* [33mdf9e292[m Tightened up many things, business case introduction, story consistencies, story flow
+* [33m043f53e[m tightened up memo 1
+* [33m85cd0a8[m updated unexpected obstacle, added segway from monte carlo to unexpected obstacle. Added risk-averseness to Scott
+* [33mfad548b[m updated memos 1 and 2. M1: Removed must use previous vendors. M2: Added planning to execution steps
+* [33m33e9ed0[m updated business case introduction
+* [33mb59c40d[m updated business case introduction
+* [33m5b92bdf[m Cleaned up 3 change scenarios. Scenario C now has 2 options.
+* [33m8998b14[m updated Scenario 1: DCDA. Added extra option to switch to dry chemical
+* [33m9b4858d[m updated memos 4 and 5
+* [33mfd5b062[m Updated memos for Cost Baseline Diagram, Risk Matrix, Monte Carlo
+* [33m88a1c63[m Moved photo disclaimer to bottom of page
+* [33made3e6d[m contact email formatting on landing page
+* [33ma304b8f[m updated stakeholder profiles
+* [33m5c785d0[m Updated tractors graphic
+* [33mb0422a2[m attempt at fixing zoom issue on mobile
+* [33mebe050b[m Changed pmcasechallenge email on home page
+* [33md60fc93[m updated landing page, added photo disclaimer, postponement clause, and subject line info
+* [33m840f13f[m updated stakeholder register, stakeholder profiles
+* [33m38a6c01[m updated stakeholder register, stakeholder profiles
+* [33mfd71c23[m updated memo 2
+* [33m95aaa27[m added final presentation entry to FAQ
+* [33m7de9b58[m Updated memo 3
+* [33maa0d83c[m Updated memos 1,2,3, Project Charter template
+* [33md339e95[m css tweaks
+* [33mdee327c[m Cleaned up nav bar
+* [33m5a4564f[m Updated working on PDUs, slight edits on business case intro page
+* [33m3fa6dab[m minor UI updates on landing page
+* [33m5d822e9[m updated modules to scenarios
+* [33mf8677e3[m fixed right sidebar widget
+* [33me99ed57[m updated PDD in FAQ
+* [33mbbe9d92[m center align Why Join section
+* [33m365028c[m Updated register button
+*   [33m6f13fee[m Merge branch 'master' of https://github.com/yangong17/PMI_CaseChallenge
+[33m|[m[34m\[m  
+[33m|[m * [33m3566bb0[m Update CNAME
+[33m|[m * [33m33a0331[m Create CNAME
+[33m|[m * [33m535675f[m Update README.md
+* [34m|[m [33m91d29a8[m updated UI
+* [34m|[m [33m5267310[m Changed landing page UI
+[34m|[m[34m/[m  
+* [33m0d46730[m Updated wording to Master's in Applied Statistics & Data Science
+* [33m62def5b[m updated email link on index, added trophy favicons on all tabs
+* [33ma2025b8[m added testing portal instructions
+* [33m7c638a2[m updated tab logo
+* [33m3a3dfe4[m more adjustments to landing page, added links to PDD
+* [33m00776ab[m Added landing page
+* [33md658398[m updated monte carlo section
+* [33m6523408[m Updated Cost Baseline Diagram Section
+* [33m60b8ed7[m updated home page
+* [33m38e7021[m minor updates to index
+* [33m7ada6f6[m tweaks to final submission instructions
+* [33m774cc84[m added nav buttons
+* [33m43b5316[m updated updated budget, Control, Closure, Final Presentation
+* [33ma0d4ee7[m added password info for testers info on unexpected-obstacle.html
+* [33m3d26465[m formatting for 3 scenarios
+* [33mabadfd2[m added content for all 3 scenarios
+* [33md6585d6[m updated obstacle 2 text
+* [33mf654660[m added passcode feature
+* [33m9fddcbd[m minor naming updates
+* [33m75898b5[m major updates - added PMI Infinity notes, all scenarios, memos, and links up to section 2.3
+* [33m16eb64f[m added dl link for project charter template
+* [33mc2daa45[m updated laying the foundation
+* [33m5a7543a[m updated business case, initiation sections
+* [33mdb73fbe[m updated formatting
+* [33m281d9c4[m added timeline widget
+* [33ma0ab56a[m updates to About, Final Presentation Guidelines
+* [33m3358ad2[m Minor menu updates
+* [33m34300d3[m overhaul, v2
+* [33mc318ed6[m index update
+* [33m455da4a[m cleaned up structure, more robust
+* [33md00bf22[m edited intro
+* [33m9d9ef06[m edited intro
+* [33m41ef297[m Fixed sidebar
+* [33m6c499de[m fixed sidebar
+* [33m14a3e4f[m updates
+* [33m3e1d3fa[m first commit
