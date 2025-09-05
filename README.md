@@ -36,7 +36,7 @@ PMI_CaseStudyChallenge/
 ├── ├── wbs.html           # 2.1 Building the Blueprint
 ├── ├── gantt-chart.html   # 2.2 Developing the Schedule
 ├── ├── cost-baseline.html # 2.3 Visualizing the Budget
-├── ├── risk-matrix.html   # 2.4.1 Mapping the Risks
+├── ├── risk-matrix.html   # 2.4.1 Registering the Risks
 ├── └── cost-uncertainty.html # 2.4.2 Simulating the Uncertain
 │
 ├── 3. Execution/
