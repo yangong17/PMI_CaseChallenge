@@ -1,4 +1,4 @@
 ﻿Risk,Min,Most Likely,Max,Likelihood
-Facility Prep,"$1,000","$3,000","$7,000",0.2
-Equipment Rentals,$250,$700,"$1,500",0.8
-Installation,$800,"$3,000","$6,000",0.3
+Facility Prep,1000,3000,7000,0.2
+Equipment Rentals,250,700,1500,0.8
+Installation,800,3000,6000,0.3
