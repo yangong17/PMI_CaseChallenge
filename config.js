@@ -7,8 +7,8 @@ window.moduleConfig = {
         },
         { 
             id: 2, 
-            name: "Execution and Control Modules", 
-            date: "2025-09-22"
+            name: "Unexpected Obstacle Reveal", 
+            date: "2025-09-19"
         }
     ],
     finalPresentationDue: "2025-10-06T23:59:00"

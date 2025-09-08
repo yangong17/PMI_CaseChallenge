@@ -423,6 +423,13 @@
     </style>
 </head>
 <body>
+    <!-- Mobile Menu Buttons -->
+    <button class="menu-button" id="leftMenuBtn" aria-label="Toggle Left Sidebar">☰</button>
+    <button class="menu-button right" id="rightMenuBtn" aria-label="Toggle Right Sidebar">⚙</button>
+    
+    <!-- Overlay -->
+    <div class="sidebar-overlay" id="overlay"></div>
+    
     <main class="landing-content">
         <div class="logo-container">
             <a href="https://pmi-la.org/" target="_blank">
@@ -589,6 +596,37 @@
     
 
     <script>
+        // Mobile Menu Functionality
+        const leftMenuBtn = document.getElementById('leftMenuBtn');
+        const rightMenuBtn = document.getElementById('rightMenuBtn');
+        const overlay = document.getElementById('overlay');
+        const leftSidebar = document.querySelector('.sidebar');
+        const rightSidebar = document.querySelector('.right-sidebar');
+
+        function toggleSidebar(sidebar, isRight = false) {
+            const isActive = sidebar.classList.contains('active');
+            
+            // Close any open sidebar first
+            leftSidebar.classList.remove('active');
+            rightSidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            
+            // If we're not just closing the current sidebar, open the new one
+            if (!isActive) {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+            }
+        }
+
+        leftMenuBtn.addEventListener('click', () => toggleSidebar(leftSidebar));
+        rightMenuBtn.addEventListener('click', () => toggleSidebar(rightSidebar, true));
+        
+        overlay.addEventListener('click', () => {
+            leftSidebar.classList.remove('active');
+            rightSidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
         // Testing mode functionality
         let testingMode = false;
         const disabledButton = document.querySelector('.disabled-button');
