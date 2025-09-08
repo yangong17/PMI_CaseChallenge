@@ -393,20 +393,18 @@ body {
 
 /* Navigation Buttons */
 .navigation-buttons {
-  display: flex;
-  justify-content: center;
-  margin-top: var(--space-8);
-  gap: var(--space-8);
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: var(--space-8);
+    margin-top: var(--space-8);
+    width: 100%;
 }
 
-.navigation-buttons.single-button {
-  justify-content: center;
-}
-
-.navigation-buttons .button.back {
-  background: #dddddd;
-  color: var(--gray-900);
+.navigation-buttons .button {
+    flex: 1;  /* Make buttons take equal width */
+    max-width: 400px;  /* Prevent buttons from getting too wide */
+    text-align: center;
+    white-space: normal;  /* Allow text to wrap if needed */
 }
 
 /* Mystery Button System */
@@ -1231,4 +1229,12 @@ body {
 .document-link .icon {
     margin-right: 0.75rem;
     font-size: 1.25rem;
+} 
+
+.button.start-journey {
+    background: linear-gradient(135deg, var(--success-500), #059669);
+}
+
+.button.start-journey:hover {
+    background: linear-gradient(135deg, #059669, #047857);
 } 
