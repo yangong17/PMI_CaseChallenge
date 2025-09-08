@@ -238,7 +238,35 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .primary-button:hover {
+        .pale-button {
+            background: #e3f2fd;
+            color: #1976d2;
+            border: 2px solid #1976d2;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .pale-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                rgba(255,255,255,0) 0%,
+                rgba(255,255,255,0.5) 50%,
+                rgba(255,255,255,0) 100%
+            );
+            transform: skewX(-20deg);
+            transition: left 0.5s;
+        }
+
+        .pale-button:hover::before {
+            animation: shimmer 1s forwards;
+        }
+
+        .primary-button:hover, .pale-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
             text-decoration: none;
@@ -275,18 +303,6 @@
             }
         }
 
-        .disabled-button {
-            background: #f0f0f0;
-            color: #666;
-            cursor: not-allowed;
-            border: 2px solid #ccc;
-            font-weight: bold;
-        }
-
-        .disabled-button:hover {
-            background: #e8e8e8;
-            text-decoration: none;
-        }
 
         /* Section styles handled by unified card styles */
 
@@ -445,8 +461,8 @@
         <h3 class="subtitle">A Full-Cycle Project Management Simulation</h3>
 
         <div class="button-container">
-            <a href="https://forms.office.com/r/KVxAJGcPi6" class="register-button primary-button">Register Now</a>
-            <a href="#" class="register-button disabled-button">Challenge Unlocks on Sept 8th 2025</a>
+            <a href="https://forms.office.com/r/KVxAJGcPi6" class="register-button pale-button">Register Now</a>
+            <a href="challenge.html" class="register-button primary-button">Access Challenge Portal</a>
         </div>
 
         <div class="event-details">
@@ -577,7 +593,6 @@
                 <a href="https://forms.office.com/r/KVxAJGcPi6" class="register-button primary-button">Register Now</a>
             </div>
 
-        <!-- <p>(Press 't' to access challenge portal)</p> -->
         <section class="support" style="margin-top: 2rem;">
             <p>Questions? Reach out to us at: <a href="mailto:contact@pmcasechallenge.com"><b>contact@pmcasechallenge.com</b></a></p>
         </section>
@@ -627,43 +642,6 @@
             overlay.classList.remove('active');
         });
 
-        // Testing mode functionality
-        let testingMode = false;
-        const disabledButton = document.querySelector('.disabled-button');
-
-        // Listen for 'T' key press to toggle testing mode
-        document.addEventListener('keydown', function(e) {
-            if (e.key.toLowerCase() === 't') {
-                testingMode = !testingMode;
-                updateButtonState();
-            }
-        });
-
-        // Update button appearance and functionality based on testing mode
-        function updateButtonState() {
-            if (testingMode) {
-                disabledButton.style.background = '#e3f2fd';
-                disabledButton.style.color = '#1976d2';
-                disabledButton.style.border = '2px solid #1976d2';
-                disabledButton.style.cursor = 'pointer';
-                disabledButton.textContent = 'Access Challenge Portal (Testing Mode)';
-            } else {
-                disabledButton.style.background = '#f0f0f0';
-                disabledButton.style.color = '#666';
-                disabledButton.style.border = '2px solid #ccc';
-                disabledButton.style.cursor = 'not-allowed';
-                disabledButton.textContent = 'Challenge Unlocks on Sept 8th 2025';
-            }
-        }
-
-        // Handle button click
-        disabledButton.addEventListener('click', function(e) {
-            if (testingMode) {
-                window.location.href = 'challenge.html';
-            } else {
-                e.preventDefault();
-            }
-        });
     </script>
 </body>
 </html>
