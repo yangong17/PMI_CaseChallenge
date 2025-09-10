@@ -1190,6 +1190,113 @@ body {
     color: var(--gray-700);
 }
 
+/* Announcements Section Styling */
+.announcements-section {
+    margin: 2rem 0 3rem 0;
+    border-radius: var(--radius-xl);
+    background: linear-gradient(135deg, var(--primary-50), white);
+    border: 1px solid var(--primary-200);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+}
+
+.announcements-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+    z-index: 1;
+}
+
+.announcements-header {
+    background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+    color: white;
+    padding: var(--space-2) var(--space-6);  /* Reduced from var(--space-4) var(--space-6) */
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.announcements-header h3 {
+    margin: 0;
+    font-size: 1.25rem;  /* Reduced from 1.25rem */
+    font-weight: 600;
+}
+
+.announcements-list {
+    padding: var(--space-4);
+}
+
+.announcement-item {
+    border: 1px solid var(--primary-100);
+    border-radius: var(--radius-lg);
+    background: white;
+    margin-bottom: var(--space-3);
+    transition: all var(--transition-base);
+}
+
+.announcement-item:last-child {
+    margin-bottom: 0;
+}
+
+.announcement-trigger {
+    width: 100%;
+    padding: var(--space-4) var(--space-6);
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    cursor: pointer;
+    color: var(--gray-800);
+    font-weight: 600;
+    text-align: left;
+    transition: all var(--transition-base);
+}
+
+.announcement-trigger:hover {
+    background: var(--primary-50);
+}
+
+.announcement-trigger .icon {
+    transition: transform var(--transition-base);
+}
+
+.announcement-trigger[aria-expanded="true"] .icon {
+    transform: rotate(180deg);
+}
+
+.announcement-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-base);
+    padding: 0 var(--space-6);
+}
+
+.announcement-content[aria-hidden="false"] {
+    max-height: 500px;
+    padding-bottom: var(--space-4);
+}
+
+.announcement-date {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    margin-top: var(--space-2);
+}
+
+.announcement-date-inline {
+    margin-left: auto;
+    color: var(--gray-500);
+    font-size: 0.875rem;
+    font-weight: normal;
+}
+
 /* Resource Section Styling */
 .resource-category {
     margin-bottom: 2rem;
