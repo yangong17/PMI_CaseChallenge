@@ -496,6 +496,15 @@ body {
 }
 
 /* Overview Components */
+.overview-content {
+  color: var(--gray-800);
+}
+
+.overview-content p {
+  color: var(--gray-800);
+  text-decoration: none;
+}
+
 .overview {
   background: linear-gradient(135deg, var(--primary-50), var(--gray-50));
   border: 1px solid var(--primary-200);
