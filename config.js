@@ -11,5 +11,5 @@ window.moduleConfig = {
             date: "2025-09-19"
         }
     ],
-    finalPresentationDue: "2025-10-06T23:59:00"
+    finalPresentationDue: "2025-10-05T23:59:00"
 }; 

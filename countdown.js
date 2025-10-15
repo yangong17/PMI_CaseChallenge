@@ -29,7 +29,7 @@ function getDaysBetween(date1, date2) {
 function formatCountdown(days) {
     if (days < 0) return 'Past due';
     if (days === 0) return 'Due today';
-    return `${days} days remaining`;
+    return `Submissions Closed`;
 }
 
 // Update countdown widget

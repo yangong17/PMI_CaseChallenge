@@ -1005,15 +1005,16 @@ body {
 
 .progress-text {
     position: absolute;
-    right: 8px;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.9rem; /* Increased from 0.8rem */
+    transform: translate(-50%, -50%);
+    font-size: 0.9rem;
     color: white;
     font-weight: 700;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Enhanced text shadow */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     z-index: 1;
-    padding: 0 6px; /* Added padding around text */
+    padding: 0 6px;
+    white-space: nowrap;
 }
 
 /* Add a dark background behind the text for better visibility when progress is low */
@@ -1284,13 +1285,15 @@ body {
 .announcement-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height var(--transition-base);
+    transition: all var(--transition-base);
     padding: 0 var(--space-6);
+    opacity: 0;
 }
 
 .announcement-content[aria-hidden="false"] {
     max-height: 500px;
-    padding-bottom: var(--space-4);
+    padding: var(--space-4) var(--space-6);
+    opacity: 1;
 }
 
 .announcement-date {
