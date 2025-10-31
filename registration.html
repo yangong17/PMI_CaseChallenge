@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WLYJXDPHVJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WLYJXDPHVJ');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="PMI-LA Case Challenge - A comprehensive hands-on project management lifecycle experience covering initiation, planning, execution, control, and closure phases.">
+    <meta name="keywords" content="PMI, project management, case study, UCLA, USC, PMP, lifecycle, PMI-LA">
+    <meta name="author" content="PMI-LA in collaboration with UCLA Department of Statistics">
+    
+    <title>PMI-LA Project Management Case Challenge 2025</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
+    <style>
+        body {
+            background: url('images/PMI-LA Background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #000;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Card Styles */
+        /* Default left alignment for event cards */
+        .event-card p {
+            text-align: left;
+        }
+        
+        /* Center alignment specifically for Why Join cards */
+        .event-card-grid .event-detail p {
+            text-align: center;
+        }
+        
+        .event-card h3 {
+            text-align: center;
+        }
+
+        .event-card, .how-it-works-section, .prize-section, .learning-outcomes-section, .faq-section {
+            background: rgba(0, 0, 0, 0.02);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .event-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .event-detail {
+            padding: 1.25rem;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .event-detail strong {
+            display: block;
+            color: #1976d2;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-detail p {
+            margin: 0;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        /* Countdown Styles */
+        #countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .landing-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        h1 {
+            color: #000;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            color: #000;
+            font-size: 3.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            color: #222;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: normal;
+            line-height: 1.3;
+        }
+
+        h3 {
+            color: #000;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            color: #333;
+            font-size: 1.2rem;
+        }
+
+        p {
+            color: #000;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul li {
+            color: #000;
+            text-align: left;
+        }
+
+        .event-details {
+            padding: 1rem 2rem;  /* Reduced top/bottom padding from 2rem to 1rem, kept left/right at 2rem */
+            margin: 2rem 0;      /* Keep the spacing between sections */
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.02);
+        }
+
+        .event-details p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0.75rem 0;
+        }
+
+        .event-details strong {
+            color: #1976d2;
+            margin-right: 0.5rem;
+        }
+
+        .key-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 1rem 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .key-point {
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.02);
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .key-point:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 0, 0, 0.04);
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            align-items: center;
+        }
+
+        .register-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            min-width: 240px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .primary-button {
+            background: #1b7cdd;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .pale-button {
+            background: #e3f2fd;
+            color: #1976d2;
+            border: 2px solid #1976d2;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .pale-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                rgba(255,255,255,0) 0%,
+                rgba(255,255,255,0.5) 50%,
+                rgba(255,255,255,0) 100%
+            );
+            transform: skewX(-20deg);
+            transition: left 0.5s;
+        }
+
+        .pale-button:hover::before {
+            animation: shimmer 1s forwards;
+        }
+
+        .primary-button:hover, .pale-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+
+        /* Modified shimmer effect to only trigger on hover */
+        .primary-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                rgba(255,255,255,0) 0%,
+                rgba(255,255,255,0.5) 50%,
+                rgba(255,255,255,0) 100%
+            );
+            transform: skewX(-20deg);
+            transition: left 0.5s;  /* Added for smooth initial state */
+        }
+
+        .primary-button:hover::before {
+            animation: shimmer 1s forwards;  /* Made animation faster and only run once */
+        }
+
+        @keyframes shimmer {
+            0% {
+                left: -75%;
+            }
+            100% {
+                left: 175%;
+            }
+        }
+
+
+        /* Section styles handled by unified card styles */
+
+        .overview-section p {
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        .key-highlights-section .key-points {
+            margin: 1.5rem 0 0 0;
+            padding: 0;
+            border: none;
+        }
+
+        .table-container {
+            margin-top: 1.5rem;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            text-align: left;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        td {
+            padding: 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            vertical-align: top;
+        }
+
+        td:first-child {
+            width: 200px;
+            background: rgba(0, 0, 0, 0.02);
+        }
+
+        td:first-child strong {
+            font-family: inherit;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .pmi-infinity-section p {
+            text-align: left;
+        }
+
+        .prize-section {
+            background: rgba(0, 0, 0, 0.02);
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .prize-section h3 {
+            color: #000000;
+        }
+
+        /* New layout styles */
+        .hero {
+            margin-bottom: 2rem;
+        }
+
+        .subheadline p {
+            margin: 0.25rem 0;
+            font-size: 1.1rem;
+            color: #222;
+        }
+
+        .why-join-section,
+        .how-it-works-section,
+        .faq-section,
+        .footer-cta {
+            margin: 2rem 0;
+            padding: 1rem 2rem;
+            background: rgba(0, 0, 0, 0.02);
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .why-join-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .why-join-section li {
+            margin: 0.5rem 0;
+            text-align: left;
+        }
+
+        .how-it-works-section ol {
+            margin: 0 0 1rem 1.25rem;
+            text-align: left;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .timeline-step {
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .timeline-step .icon {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-section details {
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            margin: 0.5rem 0;
+            text-align: left;
+        }
+
+        .faq-section summary {
+            cursor: pointer;
+            font-weight: bold;
+            outline: none;
+        }
+
+        .footer-cta .register-button {
+            min-width: 320px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Menu Buttons -->
+    <button class="menu-button" id="leftMenuBtn" aria-label="Toggle Left Sidebar">☰</button>
+    <button class="menu-button right" id="rightMenuBtn" aria-label="Toggle Right Sidebar">⚙</button>
+    
+    <!-- Overlay -->
+    <div class="sidebar-overlay" id="overlay"></div>
+    
+    <main class="landing-content">
+        <div class="logo-container">
+            <a href="https://pmi-la.org/" target="_blank">
+                <img src="images/PMI-LA Logo.jpeg" alt="PMI-LA Logo">
+            </a>
+            <a href="https://master.stat.ucla.edu/" target="_blank">
+                <img src="images/UCLA_MastersAppliedStatisticsLogoLarge.png" alt="UCLA Masters in Applied Statistics Logo">
+            </a>
+        </div>
+        
+        <h1>PMI-LA Presents:</h1>
+        <h2>The Project Management Case Challenge</h2>
+        <h3 class="subtitle">A Full-Cycle Project Management Simulation</h3>
+
+        <div class="button-container">
+            <a href="https://forms.office.com/r/KVxAJGcPi6" class="register-button pale-button">Register Now</a>
+            <a href="index.html" class="register-button primary-button">Access Challenge Portal</a>
+        </div>
+
+        <div class="notice-box" style="background-color: #fff3cd; color: #856404; padding: 1rem; margin: 1.5rem 0; border: 1px solid #ffeeba; border-radius: 8px; text-align: center; font-weight: bold;">
+            The Case Challenge is now live! Late registration open until September 18.
+        </div>
+
+        <div class="event-details">
+            <h3>Event Information</h3>
+            <p><strong>Duration:</strong> September 8 - October 6, 2025</p>
+            <p><strong>Format:</strong> Fully virtual - participate from anywhere</p>
+            <p><strong>Developed by:</strong> PMI-LA in collaboration with UCLA's Master's in Applied Statistics & Data Science Program</p>
+        </div>
+        
+
+
+        <div class="event-card">
+            <h3>Why Join?</h3>
+            
+            <div class="event-card-grid" style="text-align: center;">
+                <div class="event-detail" style="text-align: center;">
+                    <strong>Hands-on Experience</strong>
+                    <p>Create real project deliverables like charters, work breakdown structures, risk visualizations, and more</p>
+                </div>
+                <div class="event-detail" style="text-align: center;">
+                    <strong>Industry Tools</strong>
+                    <p>Learn to apply project management tools and methodologies</p>
+                </div>
+                <div class="event-detail" style="text-align: center;">
+                    <strong>Network Growth</strong>
+                    <p>Connect with peers and industry professionals in the PM community</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-it-works-section">
+            <h3>How It Works</h3>
+
+            <div class="timeline">
+                <div class="timeline-step"><span class="icon">👥</span><strong>Form Team</strong><br>Find peers or go solo</div>
+                <div class="timeline-step"><span class="icon">📝</span><strong>Register</strong><br>Secure your spot</div>
+                <div class="timeline-step"><span class="icon">📚</span><strong>Learn</strong><br>Complete 11 guided modules</div>
+                <div class="timeline-step"><span class="icon">🎤</span><strong>Present</strong><br>Share your journey and outcomes</div>
+            </div>
+        </div>
+
+        <div class="prize-section">
+            <h3>🏆 Grand Prize</h3>
+            <p>The team with the best final presentation will receive complimentary tickets (Valued at $120 each) to PMI-LA's <strong><a href="https://pmi-la.org/calendar?eventId=408" target="_blank">Professional Development Day</a></strong> on October 25, 2025</p>
+        </div>
+
+        <div class="event-card">
+            <h3>Challenge Overview</h3>
+            <p>The <strong>Project Management Case Challenge</strong> is a simulated learning experience designed to provide participants with hands-on experience working through a complete project lifecycle, from initiation to closure, guided by PMI best practices and methodologies.</p>
+            <p>While each scenario includes guidance in the form of templates and resources, the challenge is designed to encourage independent problem-solving. You will be expected to conduct your own research, apply critical thinking, and leverage learning tools such as <strong><a href="https://www.pmi.org/infinity" target="_blank">PMI Infinity</a></strong> to develop and deliver your project outputs - mirroring the realities of professional project work.</p>
+            <p>At the end of this challenge, you will deliver a final presentation showcasing your project management journey and the skills you learned, serving as a valuable artifact for your professional portfolio.</p>
+            <p>Content was developed using PMI's PM Body of Knowledge (PMBOK®), and in collaboration with UCLA's Master's in Applied Statistics & Data Science Program.</p>
+        </div>
+
+        <div class="learning-outcomes-section">
+            <h3>Challenge Structure</h3>
+            <p>The case challenge is organized into five main phases, each corresponding to a project management process group:</p>
+            <div class="table-container">
+                <table>
+                    <tr><td><strong>Project Initiation</strong></td><td>Develop project charters and stakeholder registers that align with organizational objectives</td></tr>
+                    <tr><td><strong>Project Planning</strong></td><td>Create comprehensive project plans including work breakdown structures, schedules, cost baselines, and risk management strategies.</td></tr>
+                    <tr><td><strong>Project Execution</strong></td><td>Adapt to changing circumstances. Manage project execution while handling changes and stakeholder expectations.</td></tr>
+                    <tr><td><strong>Project Control</strong></td><td>Monitor project performance and implement corrective actions as needed. Develop data visualizations to communicate project performance.</td></tr>
+                    <tr><td><strong>Project Closure</strong></td><td>Conduct project closure activities and document lessons learned. Develop a final presentation summarizing your project journey.</td></tr>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="faq-section">
+            <h3>FAQ</h3>
+            <details>
+                <summary>Who can participate?</summary>
+                <p>Open to everyone, but this challenge was designed for students and early-career professionals with minimal project management experience.</p>
+            </details>
+            <details>
+                <summary>Is it free?</summary>
+                <p>Yes - participation is completely free.</p>
+            </details>
+
+            <details>
+                <summary>What’s the time commitment?</summary>
+                <p>Expect about 2–5 hours per week, depending on your team’s pace.</p>
+            </details>
+            <details>
+                <summary>Do I need prior experience?</summary>
+                <p>No. We’ll provide templates and guidance to help you get started. All you need is the willingness to research, think critically, and engage with the challenge.</p>
+            </details>
+            <details>
+                <summary>Does this qualify for Professional Development Units (PDUs)?</summary>
+                <p>
+                    Participation in the Project Management Case Challenge does <strong>not</strong> qualify for Professional Development Units (PDUs). While the challenge is a great opportunity to build skills, gain practical experience, and expand your professional network, it is not an official PDU-eligible activity.
+                </p>
+                <p>
+                    To learn more about PDUs and PMI’s Continuing Certification Requirements (CCR), see the <a href="https://www.pmi.org/-/media/pmi/documents/public/pdf/certifications/ccr-certification-requirements-handbook.pdf" target="_blank"><b>PMI CCR Handbook</b></a>.
+                </p>
+            </details>
+            <details>
+                <summary>What is Professional Development Day (PDD)?</summary>
+                <p>PDD is PMI-LA's premier annual event focused on professional growth and leadership development. The 2025 theme is "Human-Centric Leadership Amid Emerging Technologies," exploring how project professionals can lead effectively while navigating AI, remote work, and digital transformation.</p>
+                <p><b>Highlights include:</b></p>
+                <ul style="margin-left: 20px;">
+                    <li>PDU-eligible sessions and engaging keynotes</li>
+                    <li>Leadership and innovation focused breakouts</li>
+                    <li>Professional headshots and networking</li>
+                    <li>Early bird pricing available</li>
+                </ul>
+
+                <p>For more info, check out the event page <a href="https://pmi-la.org/calendar?eventId=408" target="_blank"><b>here</b></a></p>
+                <p>For questions, contact: <a href="mailto:vpprograms@pmi-la.org">vpprograms@pmi-la.org</a></p>
+                <p>Follow PDD updates on social media:</p>
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                    <a href="https://www.linkedin.com/posts/project-management-institute-los-angeles-chapter_iampmila-pmilapdd2025-callforspeakers-activity-7364702964046835712-mCiK" target="_blank" style="text-decoration: none;">LinkedIn</a> |
+                    <a href="https://www.facebook.com/events/1471313807195348/" target="_blank" style="text-decoration: none;">Facebook</a> |
+                    <a href="https://x.com/pmi_la/status/1958581480055320799" target="_blank" style="text-decoration: none;">X (Twitter)</a> |
+                    <a href="https://www.meetup.com/pmilosangeles/events/309964573/" target="_blank" style="text-decoration: none;">Meetup</a> |
+                    <a href="https://www.tiktok.com/@pmi_lachapter" target="_blank" style="text-decoration: none;">TikTok</a> |
+                    <a href="https://www.instagram.com/p/DKu1bCIyVZl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" style="text-decoration: none;">Instagram</a>
+                </div>
+            </details>
+            <details>
+                <summary>Will my final presentation be featured online?</summary>
+                <p>We may select a few standout presentations to highlight in promotional materials. Upon participating in any PMI event, you are agreeing to allow PMI to use your likeness, including your presentation, for use in its promotional materials such as websites and social media.</p>
+            </details>
+        </div>
+
+            <div class="button-container">
+                <a href="https://forms.office.com/r/KVxAJGcPi6" class="register-button primary-button">Register Now</a>
+            </div>
+
+        <section class="support" style="margin-top: 2rem;">
+            <p>Questions? Reach out to us at: <a href="mailto:contact@pmcasechallenge.com"><b>contact@pmcasechallenge.com</b></a></p>
+        </section>
+        <br>
+        <div style="font-size: 1rem; margin: 1rem 0; padding: 0.5rem 1rem 1rem 1rem; background: rgba(0, 0, 0, 0.02); border-radius: 8px; border: 1px solid rgba(0, 0, 0, 0.1);">
+            <h4 style="margin-bottom: 0.5rem; text-align: center;">Photo Disclaimer</h4>
+            <p style="margin-bottom: 0.5rem; text-align: left;">Upon participating in any PMI event, you are agreeing to allow PMI to use your likeness for use in its promotional material including their websites.</p>
+            <br>
+            <h4 style="margin: 1rem 0 0.5rem; text-align: center;">Postponement / Cancellation</h4>
+            <p style="margin-bottom: 0.5rem; text-align: left;">Please refer to the <a href="https://pmi-la.org/faqs" target="_blank">Cancellation Policy section of the FAQ page</a></p>
+            <p style="margin-bottom: 0; text-align: left;">This event may be canceled or postponed by the Chapter, though all efforts will be made to avoid doing so. If canceled or postponed, notification will be made to all registrants via email.</p>
+        </div>
+
+    </main>
+
+    
+
+    <script>
+        // Mobile Menu Functionality
+        const leftMenuBtn = document.getElementById('leftMenuBtn');
+        const rightMenuBtn = document.getElementById('rightMenuBtn');
+        const overlay = document.getElementById('overlay');
+        const leftSidebar = document.querySelector('.sidebar');
+        const rightSidebar = document.querySelector('.right-sidebar');
+
+        function toggleSidebar(sidebar, isRight = false) {
+            const isActive = sidebar.classList.contains('active');
+            
+            // Close any open sidebar first
+            leftSidebar.classList.remove('active');
+            rightSidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            
+            // If we're not just closing the current sidebar, open the new one
+            if (!isActive) {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+            }
+        }
+
+        leftMenuBtn.addEventListener('click', () => toggleSidebar(leftSidebar));
+        rightMenuBtn.addEventListener('click', () => toggleSidebar(rightSidebar, true));
+        
+        overlay.addEventListener('click', () => {
+            leftSidebar.classList.remove('active');
+            rightSidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+    </script>
+</body>
+</html>
